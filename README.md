@@ -26,25 +26,6 @@ O projeto foi construído para alta performance estática:
 - `TypeScript` (Tipagem forte para escalabilidade)
 - `Tailwind CSS` (Estilização via classes utilitárias)
 
-### 🚀 Como rodar localmente
-
-Instale as dependências padrão:
-```bash
-npm install
-```
-
-Inicie o servidor de desenvolvimento local:
-```bash
-npm run dev
-```
-
-### ☁️ Como realizar o Deploy (Produção)
-A implantação ocorre de modo totalmente automatizado na branch \`gh-pages\` ignorando o uso de frameworks geradores internos da plataforma (via flag `.nojekyll` e `--dotfiles`):
-
-```bash
-npm run deploy
-```
-
 ---
 
 ## 🇺🇸 English
@@ -64,22 +45,3 @@ The project was built for high static performance:
 - `React` (Core UI library)
 - `TypeScript` (Strong typing for scalability)
 - `Tailwind CSS` (Utility-first styling approach)
-
-### 🚀 Running Locally
-
-Install the standard dependencies:
-```bash
-npm install
-```
-
-Start the local development server:
-```bash
-npm run dev
-```
-
-### ☁️ Deployment (Production)
-Deployment happens fully automated out of the box directly onto the \`gh-pages\` branch by bypassing GitHub's internal static site generator processes (via the `.nojekyll` flag embedded with `--dotfiles` parameter):
-
-```bash
-npm run deploy
-```
