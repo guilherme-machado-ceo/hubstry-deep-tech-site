@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <defs>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-orange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- HUBSTRY text in bold white -->
+  <text
+    x="10"
+    y="88"
+    font-family="'Arial Black', 'Impact', 'Helvetica Neue', sans-serif"
+    font-weight="900"
+    font-size="90"
+    fill="#ffffff"
+    letter-spacing="-2"
+  >HUBSTRY</text>
+
+  <!-- Orange dot: between B and S, lower position -->
+  <circle cx="238" cy="72" r="10" fill="#ff5500" filter="url(#glow-orange)"/>
+
+  <!-- Cyan dot: between S and T, upper position -->
+  <circle cx="298" cy="42" r="10" fill="#00e5ff" filter="url(#glow-cyan)"/>
+</svg>
