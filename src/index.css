@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #000000;
+    --bg-dark-card: #0c0d10;
+    --bg-light: #f8f9fb;
+    --bg-light-card: #ffffff;
+    --accent-cyan: #00ffff;
+    --accent-orange: #ff6605;
+    --accent-silver: #a9a9a9;
+    
+    --motion-duration: 900ms;
+    --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  body {
+    font-family: 'Ruda', sans-serif;
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* Headings typography standard */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  /* Labels and normative tags */
+  .normative-label {
+    font-family: 'Ruda', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8125rem; /* 13px - 14px */
+  }
+
+  /* Section vertical padding rules */
+  .section-padding {
+    padding-top: clamp(100px, 12vw, 200px);
+    padding-bottom: clamp(100px, 12vw, 200px);
+  }
+
+  .section-padding-sm {
+    padding-top: clamp(60px, 8vw, 120px);
+    padding-bottom: clamp(60px, 8vw, 120px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #22252a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333842;
+}
+
+/* Cursor Trail Styling */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--accent-cyan);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: width 400ms var(--motion-ease), height 400ms var(--motion-ease), opacity 400ms var(--motion-ease);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.cursor-trail.hovered {
+  width: 44px;
+  height: 44px;
+  opacity: 0.35;
+  background-color: var(--accent-orange);
+}
+
+@media (pointer: coarse) {
+  .cursor-trail {
+    display: none !important;
+  }
+}
+
+/* Motion & Animation helpers */
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--motion-duration) var(--motion-ease), transform var(--motion-duration) var(--motion-ease);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Title Word Animation */
+.word-reveal-span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1000ms var(--motion-ease), transform 1000ms var(--motion-ease);
+}
+
+.word-reveal-span.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Layer Overlap Effect */
+.layer-overlap {
+  margin-top: -80px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cursor-trail {
+    display: none !important;
+  }
+  .motion-reveal, .word-reveal-span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

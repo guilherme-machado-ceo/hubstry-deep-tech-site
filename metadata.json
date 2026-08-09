@@ -1,0 +1,6 @@
+{
+  "name": "Hubstry Deep Tech",
+  "description": "Site institucional da Hubstry Deep Tech - Criptografia Pós-Quântica, Governança de IA (ISO/IEC 42001), Inteligência Institucional e Otimização Quântica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
