@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Language, PageId } from '../types';
 import { LINKS } from '../data/translations';
+import hubstryLogo from '../assets/logo_hubstry.png';
 
 interface HeaderProps {
   currentLanguage: Language;
@@ -52,21 +53,20 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       id="main-header"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-        isScrolled
-          ? 'bg-black/80 backdrop-blur-md border-b border-neutral-800/80 py-3 shadow-2xl'
-          : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${isScrolled
+        ? 'bg-black/80 backdrop-blur-md border-b border-neutral-800/80 py-3 shadow-2xl'
+        : 'bg-transparent py-5'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        
+
         {/* Brand Text Header */}
         <button
           type="button"
           onClick={() => onNavigate('home')}
           className="flex items-center gap-3 group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00ffff] rounded"
         >
-          <span className="font-black text-xl tracking-wider text-white hover:text-[#00ffff] transition-colors">
+          <span className="font-black text-white text-base tracking-widest uppercase">
             HUBSTRY DEEP TECH
           </span>
         </button>
@@ -82,11 +82,10 @@ export const Header: React.FC<HeaderProps> = ({
                 key={link.id}
                 type="button"
                 onClick={() => handleLinkClick(link)}
-                className={`text-sm font-bold tracking-wide transition-colors relative py-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#00ffff] ${
-                  isActive
-                    ? 'text-[#00ffff]'
-                    : 'text-neutral-300 hover:text-white'
-                }`}
+                className={`text-sm font-bold tracking-wide transition-colors relative py-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#00ffff] ${isActive
+                  ? 'text-[#00ffff]'
+                  : 'text-neutral-300 hover:text-white'
+                  }`}
               >
                 {currentLanguage === 'pt' ? link.pt : link.en}
                 {isActive && (
@@ -104,22 +103,20 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               type="button"
               onClick={() => onLanguageChange('pt')}
-              className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all ${
-                currentLanguage === 'pt'
-                  ? 'bg-neutral-800 text-[#00ffff] shadow-sm'
-                  : 'text-neutral-400 hover:text-white'
-              }`}
+              className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all ${currentLanguage === 'pt'
+                ? 'bg-neutral-800 text-[#00ffff] shadow-sm'
+                : 'text-neutral-400 hover:text-white'
+                }`}
             >
               PT
             </button>
             <button
               type="button"
               onClick={() => onLanguageChange('en')}
-              className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all ${
-                currentLanguage === 'en'
-                  ? 'bg-neutral-800 text-[#00ffff] shadow-sm'
-                  : 'text-neutral-400 hover:text-white'
-              }`}
+              className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all ${currentLanguage === 'en'
+                ? 'bg-neutral-800 text-[#00ffff] shadow-sm'
+                : 'text-neutral-400 hover:text-white'
+                }`}
             >
               EN
             </button>

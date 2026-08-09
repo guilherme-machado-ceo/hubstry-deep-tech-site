@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Language, PageId } from '../types';
 import { LINKS, ACCORDIONS, SOLUTIONS, PROOF_ITEMS } from '../data/translations';
 import { AnimatedTitle } from '../components/AnimatedTitle';
@@ -10,23 +10,9 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate }) => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    organizacao: '',
-    cargo: '',
-    mensagem: '',
-  });
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-  };
-
   return (
     <div className="w-full">
-      
+
       {/* ==========================================
           BLOCO 1 — BANNER HERO (Fundo Escuro)
       ========================================== */}
@@ -40,7 +26,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#ff6605]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-5xl mx-auto w-full space-y-8">
-          
+
           {/* Badge Label */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full">
             <span className="w-2 h-2 rounded-full bg-[#ff6605] animate-pulse" />
@@ -106,7 +92,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         className="relative z-10 bg-[#f8f9fb] text-[#0a0b0e] px-4 sm:px-6 lg:px-8 py-24 md:py-36 layer-overlap"
       >
         <div className="max-w-3xl mx-auto space-y-8">
-          
+
           <AnimatedTitle
             as="h2"
             text={
@@ -146,7 +132,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         className="bg-black text-white section-padding px-4 sm:px-6 lg:px-8 border-t border-neutral-900"
       >
         <div className="max-w-4xl mx-auto space-y-12">
-          
+
           <div className="space-y-4">
             <span className="normative-label text-[#00ffff]">
               {currentLanguage === 'pt' ? 'DIAGNÓSTICO NORMATIVO' : 'NORMATIVE DIAGNOSIS'}
@@ -196,7 +182,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         className="bg-[#f8f9fb] text-[#0a0b0e] section-padding px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-5xl mx-auto space-y-12">
-          
+
           <div className="space-y-3">
             <span className="normative-label text-[#ff6605]">
               {currentLanguage === 'pt' ? 'METODOLOGIA PROPRIETÁRIA' : 'PROPRIETARY METHODOLOGY'}
@@ -219,7 +205,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
 
           {/* 3 Cards Linked by Line */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            
+
             {/* Card 1 (Highlighted) */}
             <div className="bg-white border-2 border-[#ff6605] p-8 rounded-2xl shadow-lg space-y-4 relative">
               <span className="normative-label text-[#ff6605] text-xs">
@@ -241,7 +227,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
                 02 · IMPLEMENTAÇÃO
               </span>
               <h3 className="text-2xl font-black text-[#0a0b0e]">
-                02 · ILMO Implementação
+                02 · IMPLEMENTAÇÃO
               </h3>
               <p className="text-sm text-neutral-700 leading-relaxed">
                 {currentLanguage === 'pt'
@@ -270,7 +256,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
           {/* Banner link below cards */}
           <div className="bg-neutral-900 text-white p-6 sm:p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-neutral-800">
             <p className="text-sm sm:text-base leading-relaxed max-w-2xl text-neutral-300">
-              <strong className="text-white font-bold">Método ILMO</strong> — {currentLanguage === 'pt' 
+              <strong className="text-white font-bold">Método ILMO</strong> — {currentLanguage === 'pt'
                 ? 'a metodologia proprietária que sustenta as três fases. Taxonomia pública, procedimento de levantamento e demarcação reservado.'
                 : 'the proprietary methodology underlying all three phases. Public taxonomy, reserved assessment and demarcation procedures.'}
             </p>
@@ -294,7 +280,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         className="bg-black text-white section-padding px-4 sm:px-6 lg:px-8 border-t border-neutral-900"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Title */}
           <div className="md:col-span-5 space-y-4">
             <span className="normative-label text-[#00ffff]">
@@ -357,7 +343,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         className="bg-[#f8f9fb] text-[#0a0b0e] section-padding px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-6xl mx-auto space-y-12">
-          
+
           <div className="space-y-3">
             <span className="normative-label text-[#00ffff] bg-black px-3 py-1 rounded-md">
               {currentLanguage === 'pt' ? 'VERTICAIS & PRODUTOS' : 'VERTICALS & PRODUCTS'}
@@ -413,7 +399,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
               onClick={() => onNavigate('gurudev')}
               className="text-black hover:text-[#ff6605] underline cursor-pointer"
             >
-              GuruDev® →
+              GuruDev™ →
             </button>
             <span>·</span>
             <button
@@ -436,7 +422,7 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
         className="bg-black text-white section-padding px-4 sm:px-6 lg:px-8 border-t border-neutral-900"
       >
         <div className="max-w-5xl mx-auto space-y-12">
-          
+
           <div className="space-y-3">
             <span className="normative-label text-[#00ffff]">
               {currentLanguage === 'pt' ? 'CORPUS PÚBLICO' : 'PUBLIC CORPUS'}
@@ -487,170 +473,106 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLanguage, onNavigate 
       </section>
 
       {/* ==========================================
-          BLOCO 8 — CONTATO (Fundo Claro Formulário)
+          BLOCO 8 — CONTATO (Canais Diretos)
       ========================================== */}
       <section
         id="contato"
         className="bg-[#f8f9fb] text-[#0a0b0e] section-padding px-4 sm:px-6 lg:px-8"
       >
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          
-          {/* Form Side */}
-          <div className="md:col-span-7 bg-white p-8 sm:p-12 rounded-3xl border border-neutral-300 shadow-md space-y-6">
-            <div className="space-y-2">
-              <span className="normative-label text-[#ff6605]">
-                {currentLanguage === 'pt' ? 'INICIE O DIÁLOGO' : 'START DIALOGUE'}
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#0a0b0e]">
-                {currentLanguage === 'pt'
-                  ? 'Comece por uma conversa de 45 minutos.'
-                  : 'Start with a 45-minute conversation.'}
-              </h2>
-              <p className="text-sm text-neutral-600 leading-relaxed">
-                {currentLanguage === 'pt'
-                  ? 'Sem apresentação institucional. Você traz a sua arquitetura, nós trazemos as perguntas que ninguém está fazendo. Ao final você sabe se há trabalho a fazer — e, se não houver, dizemos isso.'
-                  : 'No deck. You bring your architecture, we bring the questions nobody is asking. In the end, you know if there is work to be done — and if not, we tell you.'}
-              </p>
-            </div>
+        <div className="max-w-6xl mx-auto space-y-12">
 
-            {formSubmitted ? (
-              <div className="bg-emerald-50 border border-emerald-300 p-6 rounded-2xl text-emerald-900 space-y-2">
-                <h3 className="font-bold text-lg">
-                  {currentLanguage === 'pt' ? 'Mensagem enviada com sucesso!' : 'Message sent successfully!'}
+          {/* Header */}
+          <div className="max-w-3xl space-y-4">
+            <span className="normative-label text-[#ff6605]">
+              {currentLanguage === 'pt' ? 'INICIE O DIÁLOGO' : 'START DIALOGUE'}
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-black text-[#0a0b0e]">
+              {currentLanguage === 'pt'
+                ? 'Comece por uma conversa de 45 minutos.'
+                : 'Start with a 45-minute conversation.'}
+            </h2>
+            <p className="text-lg text-neutral-600 leading-relaxed">
+              {currentLanguage === 'pt'
+                ? 'Sem apresentação institucional. Você traz a sua arquitetura, nós trazemos as perguntas que ninguém está fazendo. Ao final você sabe se há trabalho a fazer — e, se não houver, dizemos isso.'
+                : 'No deck. You bring your architecture, we bring the questions nobody is asking. In the end, you know if there is work to be done — and if not, we tell you.'}
+            </p>
+          </div>
+
+          {/* 3 Contact Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            {/* Card 1 — Calendly */}
+            <a
+              href={LINKS.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-[#ff6605] hover:bg-[#ff7a20] text-black p-8 rounded-3xl shadow-lg shadow-[#ff6605]/20 flex flex-col justify-between gap-8 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="space-y-3">
+                <span className="text-3xl">📅</span>
+                <h3 className="text-xl font-black">
+                  {currentLanguage === 'pt' ? 'Agendar conversa' : 'Schedule a Call'}
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm font-medium leading-relaxed opacity-80">
                   {currentLanguage === 'pt'
-                    ? 'Recebemos seu contato. Guilherme Gonçalves Machado retornará em breve.'
-                    : 'We received your request. Guilherme Gonçalves Machado will reach out shortly.'}
+                    ? '45 minutos com o fundador. Sem pitch. Sem compromisso. Direto no Calendly.'
+                    : '45 minutes with the founder. No pitch. No commitment. Directly on Calendly.'}
                 </p>
               </div>
-            ) : (
-              <form onSubmit={handleFormSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-1">
-                      {currentLanguage === 'pt' ? 'Nome completo *' : 'Full Name *'}
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.nome}
-                      onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00ffff] text-sm text-black"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-1">
-                      {currentLanguage === 'pt' ? 'E-mail corporativo *' : 'Corporate Email *'}
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00ffff] text-sm text-black"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-1">
-                      {currentLanguage === 'pt' ? 'Organização / Empresa' : 'Organization / Company'}
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.organizacao}
-                      onChange={(e) => setFormData({ ...formData, organizacao: e.target.value })}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00ffff] text-sm text-black"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-1">
-                      {currentLanguage === 'pt' ? 'Cargo / Função' : 'Title / Role'}
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.cargo}
-                      onChange={(e) => setFormData({ ...formData, cargo: e.target.value })}
-                      className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00ffff] text-sm text-black"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-1">
-                    {currentLanguage === 'pt' ? 'Mensagem / Contexto' : 'Message / Context'}
-                  </label>
-                  <textarea
-                    rows={4}
-                    value={formData.mensagem}
-                    onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
-                    className="w-full px-4 py-3 bg-neutral-50 border border-neutral-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00ffff] text-sm text-black"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#0a0b0e] hover:bg-black text-white font-black text-sm uppercase tracking-wider py-4 rounded-xl shadow-lg cursor-pointer transition-colors"
-                >
-                  {currentLanguage === 'pt' ? 'Enviar mensagem' : 'Send Message'}
-                </button>
-              </form>
-            )}
-          </div>
-
-          {/* Quick Schedule & Direct Contacts Side */}
-          <div className="md:col-span-5 space-y-8 pt-4">
-
-            <div className="bg-black text-white p-8 rounded-3xl space-y-6 shadow-xl border border-neutral-800">
-              <span className="normative-label text-[#00ffff] text-xs">
-                {currentLanguage === 'pt' ? 'AGENDA DIRETA' : 'DIRECT CALENDAR'}
+              <span className="font-black text-sm uppercase tracking-wider group-hover:underline">
+                {currentLanguage === 'pt' ? 'Abrir Calendly →' : 'Open Calendly →'}
               </span>
-              <h3 className="text-2xl font-black text-white">
-                {currentLanguage === 'pt' ? 'Agendamento imediato' : 'Immediate Booking'}
-              </h3>
-              <p className="text-xs text-neutral-400 leading-relaxed">
-                {currentLanguage === 'pt'
-                  ? 'Escolha o melhor horário na agenda do fundador:'
-                  : 'Select the best time on the founder’s calendar:'}
-              </p>
+            </a>
 
-              <div className="space-y-3 pt-2">
-                <a
-                  href={LINKS.calendly}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-between bg-[#ff6605] text-black font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-md cursor-pointer hover:bg-[#ff7a20] transition-colors"
-                >
-                  <span>{currentLanguage === 'pt' ? 'Agendar no Calendly' : 'Schedule on Calendly'}</span>
-                  <span>→</span>
-                </a>
+            {/* Card 2 — WhatsApp */}
+            <a
+              href={LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-black text-white p-8 rounded-3xl border border-neutral-800 hover:border-[#00ffff]/60 flex flex-col justify-between gap-8 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="space-y-3">
+                <span className="text-3xl">💬</span>
+                <h3 className="text-xl font-black">
+                  {currentLanguage === 'pt' ? 'WhatsApp direto' : 'Direct WhatsApp'}
+                </h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">
+                  {currentLanguage === 'pt'
+                    ? 'Para contextos urgentes ou perguntas pontuais. Resposta rápida em horário comercial.'
+                    : 'For urgent contexts or quick questions. Fast response during business hours.'}
+                </p>
+              </div>
+              <span className="font-black text-sm uppercase tracking-wider text-[#00ffff] group-hover:underline">
+                {currentLanguage === 'pt' ? 'Abrir WhatsApp →' : 'Open WhatsApp →'}
+              </span>
+            </a>
 
+            {/* Card 3 — E-mail + Fundador */}
+            <div className="bg-white border border-neutral-300 p-8 rounded-3xl shadow-sm flex flex-col justify-between gap-8">
+              <div className="space-y-3">
+                <span className="text-3xl">✉️</span>
+                <h3 className="text-xl font-black text-[#0a0b0e]">
+                  {currentLanguage === 'pt' ? 'E-mail institucional' : 'Institutional Email'}
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed">
+                  {currentLanguage === 'pt'
+                    ? 'Para propostas formais, contratos ou comunicações institucionais.'
+                    : 'For formal proposals, contracts, or institutional communications.'}
+                </p>
+              </div>
+              <div className="space-y-1">
                 <a
-                  href={LINKS.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-between bg-neutral-900 border border-neutral-800 hover:border-[#00ffff] text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-colors"
+                  href={`mailto:${LINKS.email}`}
+                  className="block font-mono text-sm font-bold text-[#0a0b0e] hover:text-[#ff6605] transition-colors break-all"
                 >
-                  <span>{currentLanguage === 'pt' ? 'Falar no WhatsApp' : 'Chat on WhatsApp'}</span>
-                  <span className="text-[#00ffff]">💬</span>
+                  {LINKS.email}
                 </a>
+                <p className="text-xs text-neutral-500">Guilherme Gonçalves Machado</p>
+                <p className="text-xs text-neutral-400">{currentLanguage === 'pt' ? 'Fundador & CEO' : 'Founder & CEO'}</p>
               </div>
             </div>
 
-            <div className="space-y-2 text-sm text-neutral-800">
-              <p className="font-black text-base text-black">
-                Guilherme Gonçalves Machado
-              </p>
-              <p className="text-xs text-neutral-600">Fundador & CEO · Hubstry Deep Tech</p>
-              <p className="text-xs text-neutral-600 font-mono pt-1">
-                guihermemachado.ceo@hubstry.dev
-              </p>
-            </div>
-
           </div>
-
         </div>
       </section>
 

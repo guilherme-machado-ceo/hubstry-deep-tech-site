@@ -10,7 +10,7 @@ interface PageProps {
 export const HgcfPage: React.FC<PageProps> = ({ currentLanguage }) => {
   return (
     <div className="pt-28 pb-36 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
+
       <div className="space-y-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full">
           <span className="w-2 h-2 rounded-full bg-[#ff6605]" />
@@ -41,7 +41,7 @@ export const HgcfPage: React.FC<PageProps> = ({ currentLanguage }) => {
         <div className="bg-neutral-950 border border-neutral-800 p-8 rounded-2xl space-y-4">
           <h3 className="text-xl font-bold text-[#ff6605]">Alinhamento ISO/IEC 42001:2023</h3>
           <p className="text-sm text-neutral-300 leading-relaxed">
-            Mapeamento direto dos 39 controles e cláusulas da ISO 42001. Transformamos diretrizes genéricas em políticas executáveis no pipeline de desenvolvimento de software e LLMs.
+            Mapeamento direto dos 38 controles do Anexo A e cláusulas da ISO 42001. Transformamos diretrizes genéricas em políticas executáveis no pipeline de desenvolvimento de software e LLMs.
           </p>
         </div>
       </div>

@@ -14,7 +14,7 @@ export const LINKS = {
   hmiApp: "https://hubstry-maturity-index.netlify.app/",
   lexIoGraph: "https://lex-io-graph-compliance-map.streamlit.app/",
   pqcApp: "https://hubstry-cripto-pos-quantica-framework.onrender.com/",
-  email: "guihermemachado.ceo@hubstry.dev"
+  email: "guilhermemachado.ceo@hubstry.dev"
 };
 
 export const ACCORDIONS: AccordionData[] = [
@@ -33,8 +33,8 @@ export const ACCORDIONS: AccordionData[] = [
     titleEn: "The country's root of trust allows, but does not mandate",
     summaryPt: "ML-KEM e ML-DSA entraram na ICP Brasil ao lado do RSA-2048. Todos seguem válidos.",
     summaryEn: "ML-KEM and ML-DSA joined ICP Brasil alongside RSA-2048. All remain valid.",
-    contentPt: "A Instrução Normativa nº 35, de 30 de janeiro de 2026, do Instituto Nacional de Tecnologia da Informação (ITI), incorpora ML-KEM e ML-DSA à ICP-Brasil, a raiz de confiança de toda assinatura digital com validade jurídica no país. São os dois algoritmos pós-quânticos padronizados pelo NIST, o instituto de padrões dos Estados Unidos. No anexo, eles figuram ao lado de RSA-2048, Curve25519 e Ed25519. Não há cláusula de depreciação, cronograma ou data de encerramento. A norma permite; não obriga.",
-    contentEn: "Normative Instruction No. 35, dated January 30, 2026, from ITI, incorporates ML-KEM and ML-DSA into ICP-Brasil, the root of trust for all legally binding digital signatures in the country. These are the two post-quantum algorithms standardized by NIST. In the annex, they appear alongside RSA-2048, Curve25519, and Ed25519. There is no deprecation clause, schedule, or sunset date. The standard permits; it does not compel."
+    contentPt: "A Instrução Normativa nº 35, de 30 de janeiro de 2026, do Instituto Nacional de Tecnologia da Informação (ITI), incorpora ML-KEM e ML-DSA à ICP-Brasil, a raiz de confiança de toda assinatura digital com validade jurídica no país. Ambos estão entre os algoritmos pós-quânticos padronizados pelo NIST (o instituto de padrões dos EUA), ao lado do SLH-DSA. No anexo, eles figuram ao lado de RSA-2048, Curve25519 e Ed25519. Não há cláusula de depreciação, cronograma ou data de encerramento. A norma permite; não obriga.",
+    contentEn: "Normative Instruction No. 35, dated January 30, 2026, from ITI, incorporates ML-KEM and ML-DSA into ICP-Brasil, the root of trust for all legally binding digital signatures in the country. Both are among the post-quantum algorithms standardized by NIST, alongside SLH-DSA. In the annex, they appear alongside RSA-2048, Curve25519, and Ed25519. There is no deprecation clause, schedule, or sunset date. The standard permits; it does not compel."
   },
   {
     id: "acc-3",
@@ -94,7 +94,7 @@ export const SOLUTIONS: SolutionCard[] = [
     titlePt: "Logística Quântica — Otimização QUBO-VRP",
     titleEn: "Quantum Logistics — QUBO-VRP Optimization",
     descPt: "Roteamento de frota por formulação quântica, com benchmark de 48% de redução em emissão de CO₂.",
-    descEn: "Fleet routing via quantum formulation with benchmark proving 48% reduction in CO₂ emissions.",
+    descEn: "Fleet routing via quantum formulation with benchmark showing 48% reduction in CO₂ emissions.",
     linkTextPt: "Saiba mais →",
     linkTextEn: "Learn more →",
     href: "/logistica-quantica",

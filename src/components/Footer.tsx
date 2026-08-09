@@ -1,6 +1,7 @@
 import React from 'react';
 import { Language } from '../types';
 import { LINKS } from '../data/translations';
+import hubstryIcon from '../assets/icone_hubstry.png';
 
 interface FooterProps {
   currentLanguage: Language;
@@ -11,11 +12,11 @@ export const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
     <footer className="bg-neutral-950 border-t border-neutral-800 text-neutral-400 py-16 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-neutral-900">
-          
+
           {/* Brand & Mission Column */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <span className="font-black text-lg text-white tracking-wide">
+              <span className="font-black text-white text-sm tracking-widest uppercase">
                 HUBSTRY DEEP TECH
               </span>
             </div>

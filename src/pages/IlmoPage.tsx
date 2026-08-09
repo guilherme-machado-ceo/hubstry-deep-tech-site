@@ -10,7 +10,7 @@ interface PageProps {
 export const IlmoPage: React.FC<PageProps> = ({ currentLanguage }) => {
   return (
     <div className="pt-28 pb-36 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
+
       {/* Hero Header */}
       <div className="space-y-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full">
@@ -56,7 +56,7 @@ export const IlmoPage: React.FC<PageProps> = ({ currentLanguage }) => {
               <tr>
                 <td className="p-4 font-bold text-white">1. Algoritmo em uso</td>
                 <td className="p-4">Qual família criptográfica está ativa no elo (ex: RSA, ECC, ML-KEM).</td>
-                <td className="p-4 text-amber-400">Vulnerabilidade a Shors Algorithm.</td>
+                <td className="p-4 text-amber-400">Vulnerabilidade a Shor's Algorithm.</td>
               </tr>
               <tr>
                 <td className="p-4 font-bold text-white">2. Vida útil da informação (x)</td>
@@ -95,7 +95,7 @@ export const IlmoPage: React.FC<PageProps> = ({ currentLanguage }) => {
           Infraestrutura Tokenizada e Ledgers Imutáveis
         </h3>
         <p className="text-neutral-300 leading-relaxed">
-          Ledgers públicos e privados gravam dados permanentemente. Se a troca de chaves ou a assinatura utilizar algoritmos clássicos, a imunidade hoje é ilusória. A análise ILMO mapeia cada nó de validação, contrato inteligente e ponte de custódia, demarcando quais dados já se tornaram vulneráveis ao modelo &quot;Store Now, Decrypt Later&quot;.
+          Ledgers públicos e privados gravam dados permanentemente. Se a troca de chaves ou a assinatura utilizar algoritmos clássicos, a imunidade hoje é ilusória. A análise ILMO mapeia cada nó de validação, contrato inteligente e ponte de custódia, demarcando quais dados já se tornaram vulneráveis ao modelo &quot;Harvest Now, Decrypt Later&quot;.
         </p>
         <div className="pt-4">
           <a

@@ -10,7 +10,7 @@ interface PageProps {
 export const InvestidoresPage: React.FC<PageProps> = ({ currentLanguage }) => {
   return (
     <div className="pt-28 pb-36 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
+
       {/* Header */}
       <div className="space-y-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-full">
@@ -48,7 +48,7 @@ export const InvestidoresPage: React.FC<PageProps> = ({ currentLanguage }) => {
             <span className="normative-label text-[#ff6605] text-xs">RELÓGIO 1</span>
             <h3 className="text-xl font-bold text-white">Criptográfico (Q-Day)</h3>
             <p className="text-sm text-neutral-400 leading-relaxed">
-              O colapso da criptografia assimétrica (RSA/ECC) por computadores quânticos. O ataque Store Now Decrypt Later ocorre hoje.
+              O colapso da criptografia assimétrica (RSA/ECC) por computadores quânticos. O ataque Harvest Now Decrypt Later ocorre hoje.
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export const InvestidoresPage: React.FC<PageProps> = ({ currentLanguage }) => {
           <div className="space-y-2">
             <h4 className="font-bold text-white text-base">1. Corpus Autoral com DOI e Indexação</h4>
             <p>
-              Anos de pesquisa com publicações registradas garantem autoridade técnica e precedência teórica única no mercado latino-americano.
+              Anos de pesquisa com publicações registradas garantem autoridade técnica e precedência teórica rara no mercado latino-americano.
             </p>
           </div>
           <div className="space-y-2">
@@ -114,8 +114,8 @@ export const InvestidoresPage: React.FC<PageProps> = ({ currentLanguage }) => {
 
       {/* CTA Final */}
       <div className="bg-neutral-950 border border-neutral-800 p-8 rounded-2xl text-center space-y-4">
-        <h3 className="text-xl font-bold text-white">Agende uma reunião privada com os fundadores</h3>
-        <p className="text-xs text-neutral-400">Apresentação detalhada de captable, roadmaps de produtos e demonstrativos financeiros sob NDA.</p>
+        <h3 className="text-xl font-bold text-white">Agende uma reunião privada com o fundador</h3>
+        <p className="text-xs text-neutral-400">Apresentação detalhada de tese, roadmap e materiais sob NDA.</p>
         <div>
           <a
             href={LINKS.calendly}
