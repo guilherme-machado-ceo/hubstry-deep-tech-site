@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bgCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0b10"/>
+      <stop offset="100%" stop-color="#181e2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" rx="32" fill="#f1f5f9"/>
+  <rect x="20" y="20" width="1160" height="760" rx="24" fill="url(#bgCard)" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="50" y="50" width="1060" height="120" rx="20" fill="url(#headerGrad)"/>
+  <text x="90" y="98" font-family="system-ui, sans-serif" font-weight="900" font-size="18" fill="#ff6605" letter-spacing="4">AGENDAMENTO DE DIAGNÓSTICO EXECUTIVO ILMO</text>
+  <text x="90" y="136" font-family="system-ui, sans-serif" font-weight="900" font-size="28" fill="#ffffff">REUNIÃO ESTRATÉGICA DIRETA COM O FUNDADOR</text>
+
+  <!-- Left Column: Host Bio & Credentials -->
+  <g transform="translate(50, 200)">
+    <rect width="510" height="530" rx="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <!-- Profile Badge -->
+    <rect x="30" y="30" width="100" height="100" rx="50" fill="#0a0b10" stroke="#00ffff" stroke-width="3"/>
+    <text x="80" y="90" font-family="system-ui, sans-serif" font-weight="900" font-size="36" fill="#00ffff" text-anchor="middle">GGM</text>
+
+    <text x="150" y="70" font-family="system-ui, sans-serif" font-weight="900" font-size="22" fill="#0f172a">Guilherme G. Machado</text>
+    <text x="150" y="98" font-family="system-ui, sans-serif" font-weight="800" font-size="15" fill="#ff6605">CEO &amp; Founder · Hubstry Deep Tech</text>
+    <text x="150" y="120" font-family="system-ui, sans-serif" font-weight="600" font-size="13" fill="#64748b">Venture Builder Brasileiro de Deep Tech</text>
+
+    <line x1="30" y1="160" x2="480" y2="160" stroke="#cbd5e1" stroke-width="1"/>
+
+    <g transform="translate(30, 180)" font-family="system-ui, sans-serif" font-size="15" fill="#334155">
+      <text x="0" y="20" font-weight="800" fill="#0f172a">Tópicos Abordados no Diagnóstico:</text>
+      
+      <circle cx="10" cy="55" r="5" fill="#00ffff"/>
+      <text x="25" y="60" font-weight="600">Mapeamento de Riscos e Prontidão PQS</text>
+
+      <circle cx="10" cy="100" r="5" fill="#00ffff"/>
+      <text x="25" y="105" font-weight="600">Requisitos BACEN, CVM e ICP-Brasil</text>
+
+      <circle cx="10" cy="145" r="5" fill="#00ffff"/>
+      <text x="25" y="150" font-weight="600">Arquitetura de Criptografia Pós-Quântica</text>
+
+      <circle cx="10" cy="190" r="5" fill="#00ffff"/>
+      <text x="25" y="195" font-weight="600">Estimativa de Investimento e Prazos</text>
+    </g>
+
+    <rect x="30" y="440" width="450" height="60" rx="14" fill="#0a0b10"/>
+    <text x="255" y="476" font-family="system-ui, sans-serif" font-weight="900" font-size="15" fill="#ffffff" text-anchor="middle">ATENDIMENTO EXCLUSIVO C-LEVEL &amp; CONSELHO</text>
+  </g>
+
+  <!-- Right Column: Meeting Specs & Calendly Card -->
+  <g transform="translate(590, 200)">
+    <rect width="520" height="530" rx="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+    <g transform="translate(40, 40)" font-family="system-ui, sans-serif">
+      <rect width="440" height="90" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="30" y="40" font-weight="900" font-size="16" fill="#0f172a">⏱️ DURAÇÃO</text>
+      <text x="30" y="68" font-weight="700" font-size="20" fill="#ff6605">45 Minutos · Sessão Individual</text>
+
+      <rect y="110" width="440" height="90" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="30" y="150" font-weight="900" font-size="16" fill="#0f172a">🔒 CONFIDENCIALIDADE</text>
+      <text x="30" y="178" font-weight="700" font-size="18" fill="#00ffff">Acordo de Confidencialidade (NDA)</text>
+
+      <rect y="220" width="440" height="90" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="30" y="260" font-weight="900" font-size="16" fill="#0f172a">📊 FORMATO</text>
+      <text x="30" y="288" font-weight="700" font-size="18" fill="#0f172a">Videoconferência Privada &amp; Relatório</text>
+    </g>
+
+    <rect x="40" y="380" width="440" height="110" rx="20" fill="#ff6605"/>
+    <text x="260" y="425" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#000000" text-anchor="middle">CLIQUE PARA AGENDAR NO CALENDLY</text>
+    <text x="260" y="458" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#000000" text-anchor="middle">Escolha a data e horário diretamente na agenda oficial</text>
+  </g>
+</svg>
