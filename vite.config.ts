@@ -5,7 +5,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/hubstry-deep-tech-site/',
+    // SITE_BASE=/ para publicar em hubstry.dev; padrão mantém o espelho do GitHub Pages
+    base: process.env.SITE_BASE ?? '/hubstry-deep-tech-site/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

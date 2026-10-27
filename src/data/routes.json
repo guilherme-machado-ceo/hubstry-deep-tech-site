@@ -1,0 +1,53 @@
+{
+  "siteUrl": "https://hubstry.dev",
+  "routes": [
+    {
+      "id": "home",
+      "path": "/",
+      "title": "Hubstry Deep Tech | Demarcação entre Direito, Tecnologia e Capital",
+      "description": "Operating deep tech venture builder brasileiro. Criptografia pós-quântica (ILMO), governança de IA (HGCF), inteligência institucional (CPG) e otimização quântica."
+    },
+    {
+      "id": "ilmo",
+      "path": "/ilmo",
+      "title": "ILMO — Segurança Pós-Quântica | Hubstry Deep Tech",
+      "description": "Análise de risco criptográfico para quem decide arquitetura com vida útil de década."
+    },
+    {
+      "id": "hgcf",
+      "path": "/hgcf",
+      "title": "HGCF — Governança e Conformidade de IA | Hubstry Deep Tech",
+      "description": "Framework proprietário de governança de inteligência artificial, alinhado à ISO/IEC 42001:2023."
+    },
+    {
+      "id": "cpg",
+      "path": "/cpg",
+      "title": "CPG — Inteligência Institucional e Regulatória | Hubstry Deep Tech",
+      "description": "A arquitetura de demarcação entre domínios, publicada em working papers com DOI, e o atlas jurídico-regulatório Lex-IO-Graph."
+    },
+    {
+      "id": "logistica-quantica",
+      "path": "/logistica-quantica",
+      "title": "Logística Quântica — Otimização QUBO-VRP | Hubstry Deep Tech",
+      "description": "Roteamento de frota por formulação quântica, com benchmark de 48% de redução em emissão de CO₂."
+    },
+    {
+      "id": "gurudev",
+      "path": "/gurudev",
+      "title": "GuruDev™ — Linguagem Ontológica | Hubstry Deep Tech",
+      "description": "Linguagem de programação ontológica e multissemiótica desenvolvida para formalização de conceitos e semântica de sistemas."
+    },
+    {
+      "id": "nautam",
+      "path": "/nautam",
+      "title": "Nautam — Protocolo IoT de Séries Harmônicas | Hubstry Deep Tech",
+      "description": "Protocolo de comunicação leve para dispositivos de borda baseado em ressonância e séries harmônicas."
+    },
+    {
+      "id": "investidores",
+      "path": "/investidores",
+      "title": "Tese de Investimento | Hubstry Deep Tech",
+      "description": "Monetizando a fronteira inevitável entre o colapso da criptografia clássica, a exigência de governança de IA e a atualização de infraestruturas críticas."
+    }
+  ]
+}

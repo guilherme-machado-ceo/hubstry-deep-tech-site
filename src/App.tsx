@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { CursorTrail } from './components/CursorTrail';
 import { MobileFixedCta } from './components/MobileFixedCta';
+import { applySeo, pageFromLocation, pathFor } from './routing';
 
 import { HomePage } from './pages/HomePage';
 import { IlmoPage } from './pages/IlmoPage';
@@ -16,10 +17,13 @@ import { InvestidoresPage } from './pages/InvestidoresPage';
 
 export function App() {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('pt');
-  const [currentPage, setCurrentPage] = useState<PageId>('home');
+  const [currentPage, setCurrentPage] = useState<PageId>(pageFromLocation);
 
   // Handle URL hash changes or internal page navigation
   const handleNavigate = (page: PageId, targetHash?: string) => {
+    if (page !== currentPage) {
+      window.history.pushState({ page }, '', pathFor(page));
+    }
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -33,13 +37,17 @@ export function App() {
     }
   };
 
+  // Endereço próprio por página: /ilmo, /hgcf, /cpg etc. (botões voltar/avançar incluídos)
   useEffect(() => {
-    // Check initial window location hash if any
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'ilmo' || hash === 'hgcf' || hash === 'cpg' || hash === 'investidores') {
-      setCurrentPage(hash as PageId);
-    }
+    const onPopState = () => setCurrentPage(pageFromLocation());
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
   }, []);
+
+  // Título, descrição e canonical de cada página, para o Google indexá-las separadamente
+  useEffect(() => {
+    applySeo(currentPage);
+  }, [currentPage]);
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-[#00ffff] selection:text-black flex flex-col justify-between">
